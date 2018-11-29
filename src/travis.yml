@@ -1,6 +1,6 @@
- language: node_js
+language: node_js
 node_js:
-  - "9"
+  - "9" 
 dist: trusty
 sudo: false
 
@@ -17,7 +17,7 @@ install:
 
 script:
   - yarn lint
-  - yarn build --base-href https://harsha110.github.io/angularTestting/
+  - yarn build --base-href https://harsha110.github.io/Angular_Testing/
 deploy:
   provider: pages
   skip_cleanup: true
