@@ -17,11 +17,11 @@ install:
 
 script:
   - yarn lint
-  - yarn build --base-href https://[ your github username ].github.io/my-awesome-project/
+  - yarn build --base-href https://harsha110.github.io/angularTestting/
 deploy:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/my-awesome-project
+  local_dir: dist/angularTestting
   on:
     branch: master
