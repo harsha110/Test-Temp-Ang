@@ -17,7 +17,7 @@ install:
 
 script:
   - yarn lint
-  - yarn build --base-href https://harsha110.github.io/Angular_Testing/
+  - yarn build --base-href https://harsha110.github.io/Angular-CI/
 deploy:
   provider: pages
   skip_cleanup: true
