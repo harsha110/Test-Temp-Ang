@@ -23,7 +23,7 @@ script:
   - npm install -g @angular/cli
   - npm run lint
   - npm run test
-  - npm run build --base-href https://harsha110.github.io/angularTestting/
+  - npm run build --base-href https://harsha110.github.io/Test-Temp-Ang/
 deploy:
   provider: pages
   skip_cleanup: true
