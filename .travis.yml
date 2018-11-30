@@ -21,8 +21,9 @@ install:
   - npm install -g yarn
 
 script:
-  - yarn lint
-  - yarn build --base-href https://harsha110.github.io/angularTestting/
+  - npm run lint
+  - npm run test
+  - npm run build --base-href https://harsha110.github.io/angularTestting/
 deploy:
   provider: pages
   skip_cleanup: true
