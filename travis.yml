@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "9" 
+  - "9"
 dist: trusty
 sudo: false
 
@@ -12,12 +12,17 @@ cache:
   directories:
     - node_modules
 
+notifications:
+ email:
+   on_success: always
+   on_failure: always
+ slack: cgiwave6:h9BQb1Y4KA4QNTysVx79hgt0
 install:
   - npm install -g yarn
 
 script:
   - yarn lint
-  - yarn build --base-href https://harsha110.github.io/Angular-CI/
+  - yarn build --base-href https://harsha110.github.io/angularTestting/
 deploy:
   provider: pages
   skip_cleanup: true
