@@ -19,11 +19,13 @@ notifications:
  slack: cgiwave6:h9BQb1Y4KA4QNTysVx79hgt0
 install:
   - npm install -g yarn
+before_script:
+ - npm install -g @angular-devkit/build-angular
+ - npm install -g @angular/cli
+
 script:
-  - npm install -g @angular/cli
-  - npm run lint
-  - npm run test
-  - npm run build --base-href https://harsha110.github.io/Test-Temp-Ang/
+ -ng build
+ -ng test
 deploy:
   provider: pages
   skip_cleanup: true
