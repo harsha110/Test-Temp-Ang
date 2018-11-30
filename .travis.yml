@@ -1,8 +1,11 @@
+sudo: required
+
 language: node_js
 node_js:
-  - "9"
+  - "10.9.0"
 dist: trusty
-sudo: false
+
+
 
 branches:
   only:
@@ -13,23 +16,28 @@ cache:
     - node_modules
 
 notifications:
- email:
-   on_success: always
-   on_failure: always
- slack: cgiwave6:h9BQb1Y4KA4QNTysVx79hgt0
-install:
-  - npm install -g yarn
+  email:
+    on_success: always
+    on_failure: always
+  slack: cgiwave6:h9BQb1Y4KA4QNTysVx79hgt0
+  
 before_script:
  - npm install -g @angular-devkit/build-angular
  - npm install -g @angular/cli
+ - npm install
 
 script:
  - ng build
- - ng test
+ - ng test --watch=false
+
+
 build:
   provider: pages
   skip_cleanup: true
   github_token: $GITHUB_TOKEN
-  local_dir: dist/angularTestting
+  local_dir: dist/angularTestting  
   on:
     branch: master
+
+after_sucess:
+  - /bin/bash ./deploy.sh    
