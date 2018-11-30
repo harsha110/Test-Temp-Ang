@@ -19,7 +19,7 @@ notifications:
  slack: cgiwave6:h9BQb1Y4KA4QNTysVx79hgt0
 install:
   - npm install -g yarn
-
+  - npm install @angular/cli -g
 script:
   - npm run lint
   - npm run test
